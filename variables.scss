@@ -23,7 +23,7 @@ $important: #D84033;
         }
     }
     @else if $point == xs {
-        @media (max-width: 320px){
+        @media (max-width: 500px){
             @content;
         }
     }

@@ -5,6 +5,11 @@ body {
 .page {
   padding-top: 100px;
 }
+@media (max-width: 576px) {
+  .page {
+    padding-top: 70px;
+  }
+}
 .page-light {
   background-color: #F9F6F1;
 }
@@ -80,6 +85,11 @@ body {
   text-align: center;
   font-size: 36px;
 }
+@media (max-width: 500px) {
+  .title-h2 {
+    font-size: 28px;
+  }
+}
 
 .btn {
   background-color: #D7B399;
@@ -129,11 +139,23 @@ body {
   color: black;
   letter-spacing: -0.6px;
 }
+@media (max-width: 576px) {
+  .main .sale-description {
+    font-size: 20px;
+  }
+}
 .main .sale-title {
   font-size: 55px;
   font-weight: 700;
   margin-top: 30px;
   margin-bottom: 60px;
+}
+@media (max-width: 576px) {
+  .main .sale-title {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+  }
 }
 
 .box {
@@ -141,7 +163,7 @@ body {
 }
 @media (max-width: 992px) {
   .box {
-    max-width: 600px;
+    max-width: 350px;
     margin: 50px auto 0;
   }
 }
@@ -155,15 +177,40 @@ body {
   font-size: 24px;
   font-weight: 700;
 }
+@media (max-width: 576px) {
+  .box-price-old {
+    font-size: 14px;
+  }
+}
 .box-price-new {
   font-size: 42px;
   font-weight: 700;
   color: #D84033;
   margin-top: 17px;
 }
+@media (max-width: 576px) {
+  .box-price-new {
+    font-size: 30px;
+    margin-top: 8px;
+  }
+}
 .box-image {
   position: relative;
   max-width: 556px;
+  height: 343px;
+  width: 430px;
+}
+@media (max-width: 576px) {
+  .box-image {
+    height: 233px;
+    width: 268px;
+  }
+}
+@media (max-width: 992px) {
+  .box-image {
+    height: 288px;
+    width: 311px;
+  }
 }
 
 .logo-top {
@@ -183,12 +230,33 @@ body {
   color: white;
   padding: 50px 0;
 }
+@media (max-width: 576px) {
+  .notice {
+    padding: 40px 0 42px;
+  }
+}
 .notice-title {
   font-size: 30px;
   text-transform: uppercase;
 }
 .notice-title span {
   font-weight: 700;
+}
+@media (max-width: 500px) {
+  .notice-title span {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .notice-title {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 576px) {
+  .notice-description {
+    font-size: 14px;
+  }
 }
 
 .collection {
@@ -211,22 +279,47 @@ body {
     flex: 0 0 100%;
   }
 }
+@media (max-width: 500px) {
+  .collection-item {
+    background-position: 100% bottom;
+  }
+}
 .collection-man {
   background-image: url(../images/man.png);
   background-size: 200px 171px;
 }
+@media (max-width: 500px) {
+  .collection-man {
+    background-size: 150px 120px;
+  }
+}
 .collection-woman {
   background-image: url(../images/woman.png);
   background-size: 130px 171px;
+}
+@media (max-width: 500px) {
+  .collection-woman {
+    background-size: 100px 130px;
+  }
 }
 .collection-title {
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  .collection-title {
+    font-size: 18px;
+  }
+}
 .collection-description {
   font-size: 16px;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .collection-description {
+    font-size: 14px;
+  }
 }
 
 .product {
@@ -241,6 +334,11 @@ body {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 500px) {
+  .product {
+    margin-bottom: 15px;
+  }
+}
 .product-item {
   flex: 0 0 24%;
   position: relative;
@@ -248,6 +346,12 @@ body {
 @media (max-width: 992px) {
   .product-item {
     flex: 0 0 49%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .product-item {
+    flex: 0 0 100%;
     margin-bottom: 20px;
   }
 }
@@ -321,8 +425,10 @@ body {
 }
 @media (max-width: 576px) {
   .footer-list {
-    flex: 0 0 49%;
+    flex: 0 0 100%;
     margin-bottom: 20px;
+    text-align: center;
+    padding-left: 50px;
   }
 }
 .footer-list-title {
@@ -334,8 +440,18 @@ body {
   text-decoration: none;
   font-size: 14px;
 }
+@media (max-width: 500px) {
+  .footer-list-link {
+    font-size: 12px;
+  }
+}
 .footer-list-item {
   margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .footer-list-item {
+    margin-bottom: 14px;
+  }
 }
 .footer-bottom {
   display: flex;
@@ -436,4 +552,26 @@ body {
 
 .nav-link:hover::before {
   transform: scaleX(1);
+}
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  list-style-type: none;
+  margin-left: -40px;
+  padding-bottom: 20px;
+}
+
+.delivery-description {
+  text-align: left;
+}
+.delivery-ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+.delivery-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

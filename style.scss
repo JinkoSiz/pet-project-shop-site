@@ -5,6 +5,9 @@ body{
 }
 .page{
     padding-top: 100px; 
+    @include breakpoint (sm) {
+        padding-top: 70px; 
+    }
     &-light{
         background-color: $light;
     }
@@ -72,6 +75,9 @@ nav{
 .title-h2{
     text-align: center;
     font-size: 36px;
+    @include breakpoint (xs) {
+        font-size: 28px;
+    }
 }
 .btn{
     background-color: $accent;
@@ -113,18 +119,26 @@ nav{
             font-size: 30px;
             color: black;
             letter-spacing: -0.6px;
+            @include breakpoint (sm) {
+                font-size: 20px;
+            }
         }
         &-title{
             font-size: 55px;
             font-weight: 700;
             margin-top: 30px;
             margin-bottom: 60px;
+            @include breakpoint (sm) {
+                font-size: 28px;
+                margin-top: 10px;
+                margin-bottom: 45px;
+            }
         }
     }
 }
 .box{
     @include breakpoint (lg) {
-        max-width: 600px;
+        max-width: 350px;
         margin: 50px auto 0;
     }
     position: relative;
@@ -136,17 +150,34 @@ nav{
         &-old{
             font-size: 24px;
             font-weight: 700;
+            @include breakpoint (sm) {
+                font-size: 14px;
+            }
         }
         &-new{
             font-size: 42px;
             font-weight: 700;
             color: $important;
-            margin-top: 17px ;
+            margin-top: 17px;
+            @include breakpoint (sm) {
+                font-size: 30px;
+                margin-top: 8px;
+            }
         }
     }
     &-image{
         position: relative;
         max-width: 556px;
+        height: 343px;
+        width: 430px;
+        @include breakpoint (sm) {
+            height: 233px;
+            width: 268px;
+        }
+        @include breakpoint (lg) {
+            height: 288px;
+            width: 311px;
+        }
     }
 }
 .logo{
@@ -167,11 +198,26 @@ nav{
     text-align: center;
     color: white;
     padding: 50px 0;
+    @include breakpoint (sm) {
+        padding: 40px 0 42px;
+    }
     &-title{
         font-size: 30px;
         text-transform: uppercase;
         span{
             font-weight: 700;
+            @include breakpoint (xs) {
+                display: block;
+            }
+        }
+        @include breakpoint (sm) {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+    &-description{
+        @include breakpoint (sm) {
+            font-size: 14px;
         }
     }
 }
@@ -189,23 +235,38 @@ nav{
         @include breakpoint (lg) {
             flex: 0 0 100%;
         }
+        @include breakpoint (xs) {
+            background-position: 100% bottom;
+        }
     }
     &-man{
         background-image: url(../images/man.png);
         background-size: 200px 171px;
+        @include breakpoint (xs) {
+            background-size: 150px 120px;
+        }
     }
     &-woman{
         background-image: url(../images/woman.png);
         background-size: 130px 171px;
+        @include breakpoint (xs) {
+            background-size: 100px 130px;
+        }
     }
     &-title{
         font-size: 24px;
         font-weight: 300;
         text-transform: uppercase;
+        @include breakpoint (xs) {
+            font-size: 18px;
+        }
     }
     &-description{
         font-size: 16px;
         margin-bottom: 30px;
+        @include breakpoint (xs) {
+            font-size: 14px;
+        }
     }
 }
 .product{
@@ -217,11 +278,18 @@ nav{
     @include breakpoint (lg) {
         flex-wrap: wrap;
     }
+    @include breakpoint (xs) {
+        margin-bottom: 15px;
+    }
     &-item{
         flex: 0 0 24%;
         position: relative;
         @include breakpoint (lg) {
             flex: 0 0 49%;
+            margin-bottom: 20px;
+        }
+        @include breakpoint (xs) {
+            flex: 0 0 100%;
             margin-bottom: 20px;
         }
         &:before,&:after{
@@ -282,9 +350,11 @@ nav{
         list-style-type: none;
         padding-left: 0;
         @include breakpoint (sm) {
-            flex: 0 0 49%;
+            flex: 0 0 100%;
             margin-bottom: 20px;
-        }
+            text-align: center;
+            padding-left: 50px;
+        }   
         &-title{
             font-size: 10px;
             font-weight: 700;
@@ -293,9 +363,15 @@ nav{
             color: $gray;
             text-decoration: none;
             font-size: 14px;
+            @include breakpoint (xs) {
+                font-size: 12px;
+            }
         }
         &-item{
             margin-bottom: 10px;
+            @include breakpoint (xs) {
+                margin-bottom: 14px;
+            }
         }
     }
     &-bottom{
@@ -393,4 +469,28 @@ nav{
 
 .nav-link:hover::before {
 	transform: scaleX(1);
+}
+
+.breadcrumb{
+    list-style: none;
+    display: flex;
+    list-style-type: none;
+    margin-left: -40px;
+    padding-bottom: 20px;
+}
+
+.delivery{
+    &-description{
+        text-align: left;
+    }
+    &-ul{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        padding-left: 20px;
+    }
+    &-list{
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
 }
